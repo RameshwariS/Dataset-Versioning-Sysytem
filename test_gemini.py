@@ -1,7 +1,7 @@
 import os
 import google.generativeai as genai
 
-api_key = os.environ.get("GOOGLE_API_KEY", "AIzaSyDqLC6HYhkAVcAkm86CZwbq7vPUxSNAJg8").strip()
+api_key = os.environ.get("GOOGLE_API_KEY", "API key").strip()
 genai.configure(api_key=api_key)
 
 models_to_test = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-1.5-pro", "gemini-pro"]
