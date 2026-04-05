@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsv"
+version = "1.0.0"
+description = "Dataset Versioning System — a git-style CLI for versioning, comparing, and training on datasets"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["dataset", "versioning", "machine-learning", "cli", "mlops"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Version Control",
+]
+
+# No heavy external dependencies — pure stdlib + optional numpy/sklearn
+dependencies = []
+
+[project.optional-dependencies]
+ai = [
+    "google-generativeai",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+]
+
+[project.scripts]
+dsv = "dsv.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dsv*"]
+
+[tool.setuptools.package-data]
+dsv = ["*.md", "*.json", "*.html"]

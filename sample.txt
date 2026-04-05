@@ -1,0 +1,10 @@
+The food was amazing|positive
+The service was terrible|negative
+Wait time was long but worth it|positive
+I hated the coffee|negative
+Best place in town|positive
+Never coming back here|negative
+Awesome experience|positive
+Bad vibes only|negative
+Very tasty pizza|positive
+Slow delivery|negative
